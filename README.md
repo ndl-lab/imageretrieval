@@ -14,15 +14,22 @@ dataset/1
 
 があるとき、1.pklに特徴量が保存されます。
 形式はディクショナリで、{"iiifuri":uri,"vec":(1280次元の特徴量)}
-"iiifuri"は、次世代デジタルライブラリーがNDLデジタルコレクションのIIIF Image apiを使用しているため必要なURIです。必要に応じて持たせる情報をカスタマイズしてください。
+
+"iiifuri"は、次世代デジタルライブラリーがNDLデジタルコレクションのIIIF Image apiを使用しているため必要なURIです。
+
+必要に応じて持たせる情報をカスタマイズしてください。
 
 ```python3 extract_features_mobilenetv2.py```
 ##　インデックス作成
 Yahoo!社の[NGTD](https://github.com/yahoojapan/ngtd)を導入したDockerコンテナを用意し、
+
 run.shを書き換えて、適当なポート番号でNGTDを起動します。
+
 ポート番号を合わせて、インデックスに投入したいpickleファイルを指定したうえで、
+
 buildindex.pyを実行するとインデックスが作成されます。
-検索の方法はNGTDのリポジトリをご参照ください。
+
+検索クエリの作り方は[次世代デジタルライブラリーのバックエンドソースコード](https://github.com/ndl-lab/tugidigi-web/blob/master/back/src/main/java/jp/go/ndl/lab/dl/back/service/VectorSearchService.java)、やNGTDのリポジトリをご参照ください。
 
 
 
