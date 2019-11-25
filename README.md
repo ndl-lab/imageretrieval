@@ -20,7 +20,7 @@ dataset/1
 必要に応じて持たせる情報をカスタマイズしてください。
 
 ```python3 extract_features_mobilenetv2.py```
-##　インデックス作成
+## インデックス作成
 Yahoo!社の[NGTD](https://github.com/yahoojapan/ngtd)を導入したDockerコンテナを用意し、
 
 run.shを書き換えて、適当なポート番号でNGTDを起動します。
